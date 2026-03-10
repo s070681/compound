@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Release numbering now follows the repository `v*` tag line. Starting at `v2.34.0`, the root CLI package and this changelog stay on that shared version stream. Older entries below retain the previous `0.x` CLI numbering.
 
+## [2.34.5](https://github.com/EveryInc/compound-engineering-plugin/compare/v2.34.4...v2.34.5) (2026-03-10)
+
+
+### Bug Fixes
+
+* **lfg:** enforce plan phase with explicit step gating ([b07f43d](https://github.com/EveryInc/compound-engineering-plugin/commit/b07f43ddf59cd7f2fe54b2e0a00d2b5b508b7f11)), closes [#227](https://github.com/EveryInc/compound-engineering-plugin/issues/227)
+
 ## [2.34.4](https://github.com/EveryInc/compound-engineering-plugin/compare/v2.34.3...v2.34.4) (2026-03-04)
 
 
