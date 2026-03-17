@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Release numbering now follows the repository `v*` tag line. Starting at `v2.34.0`, the root CLI package and this changelog stay on that shared version stream. Older entries below retain the previous `0.x` CLI numbering.
 
+## [2.40.1](https://github.com/EveryInc/compound-engineering-plugin/compare/v2.40.0...v2.40.1) (2026-03-17)
+
+
+### Bug Fixes
+
+* **kiro:** parse .mcp.json wrapper key and support remote MCP servers ([#259](https://github.com/EveryInc/compound-engineering-plugin/issues/259)) ([dfff20e](https://github.com/EveryInc/compound-engineering-plugin/commit/dfff20e1adab891b4645a53d0581d4b20577e3f1))
+
 # [2.40.0](https://github.com/EveryInc/compound-engineering-plugin/compare/v2.39.0...v2.40.0) (2026-03-17)
 
 
