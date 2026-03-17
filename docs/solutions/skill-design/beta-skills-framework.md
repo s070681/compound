@@ -39,11 +39,12 @@ skills/
 └── deepen-plan-beta/SKILL.md  # New version
 ```
 
-### Naming conventions
+### Naming and frontmatter conventions
 
 - **Directory**: `<skill-name>-beta/`
 - **Frontmatter name**: `<skill:name>-beta` (e.g., `ce:plan-beta`)
-- **Description prefix**: `[BETA]` to make it visually obvious
+- **Description**: Write the intended stable description, then prefix with `[BETA]`. This ensures promotion is a simple prefix removal rather than a rewrite.
+- **`disable-model-invocation: true`**: Prevents the model from auto-triggering the beta skill. Users invoke it manually with the slash command. Remove this field when promoting to stable.
 - **Plan files**: Use `-beta-plan.md` suffix (e.g., `2026-03-17-001-feat-auth-flow-beta-plan.md`) to avoid clobbering stable plan files
 
 ### Internal references
@@ -70,13 +71,14 @@ Beta skills must reference each other by their beta names:
 When the beta version is validated:
 
 1. Replace stable `SKILL.md` content with beta skill content
-2. Restore stable frontmatter: remove `[BETA]` prefix, restore stable `name:`
-3. Update all internal references back to stable names
-4. Restore stable plan file naming (remove `-beta` from the convention)
-5. Delete the beta skill directory
-6. Update README.md: remove from Beta Skills section, verify counts
-7. Verify `lfg`/`slfg` work with the promoted skill
-8. Verify `ce:work` consumes plans from the promoted skill
+2. Restore stable frontmatter: remove `[BETA]` prefix from description, restore stable `name:`
+3. Remove `disable-model-invocation: true` so the model can auto-trigger it
+4. Update all internal references back to stable names
+5. Restore stable plan file naming (remove `-beta` from the convention)
+6. Delete the beta skill directory
+7. Update README.md: remove from Beta Skills section, verify counts
+8. Verify `lfg`/`slfg` work with the promoted skill
+9. Verify `ce:work` consumes plans from the promoted skill
 
 ## Prevention
 

@@ -1,7 +1,8 @@
 ---
 name: deepen-plan-beta
-description: "[BETA] Stress-test an existing implementation plan and selectively strengthen weak sections with targeted research. Use when a plan from ce:plan-beta needs more confidence around decisions, sequencing, system-wide impact, risks, or verification."
+description: "[BETA] Stress-test an existing implementation plan and selectively strengthen weak sections with targeted research. Use when a plan needs more confidence around decisions, sequencing, system-wide impact, risks, or verification. Best for Standard or Deep plans, or high-risk topics such as auth, payments, migrations, external APIs, and security. For structural or clarity improvements, prefer document-review instead."
 argument-hint: "[path to plan file]"
+disable-model-invocation: true
 ---
 
 # Deepen Plan

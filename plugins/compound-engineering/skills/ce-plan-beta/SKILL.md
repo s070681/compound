@@ -1,7 +1,8 @@
 ---
 name: ce:plan-beta
-description: "[BETA] Transform feature descriptions or requirements into structured, decision-first implementation plans. Use when testing the new planning workflow. Produces plans focused on decisions, boundaries, and verification rather than pre-written implementation choreography."
+description: "[BETA] Transform feature descriptions or requirements into structured implementation plans grounded in repo patterns and research. Use when the user says 'plan this', 'create a plan', 'write a tech plan', 'plan the implementation', 'how should we build', 'what's the approach for', 'break this down', or when a brainstorm/requirements document is ready for technical planning. Best when requirements are at least roughly defined; for exploratory or ambiguous requests, prefer ce:brainstorm first."
 argument-hint: "[feature description, requirements doc path, or improvement idea]"
+disable-model-invocation: true
 ---
 
 # Create Technical Plan

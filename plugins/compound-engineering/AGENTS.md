@@ -125,6 +125,8 @@ See `docs/solutions/skill-design/beta-skills-framework.md` for the full pattern.
 ### Beta Skill Rules
 
 - Beta skills use `-beta` suffix in directory name, skill name, and description prefix (`[BETA]`)
+- Beta skills set `disable-model-invocation: true` to prevent accidental auto-triggering — users invoke them manually
+- Beta skill descriptions should be the intended stable description prefixed with `[BETA]`, so promotion is a simple prefix removal
 - Beta skills must reference other beta skills by their beta names (e.g., `/deepen-plan-beta`, not `/deepen-plan`)
 - Beta plan output files use `-beta-plan.md` suffix to avoid clobbering stable plan files
 - Beta skills are not wired into `lfg`/`slfg` orchestration — invoke them directly
@@ -135,6 +137,7 @@ When replacing a stable skill with its beta version:
 
 - [ ] Replace stable `SKILL.md` content with beta skill content
 - [ ] Restore stable frontmatter: remove `[BETA]` prefix from description, restore stable `name:` (e.g., `ce:plan` not `ce:plan-beta`)
+- [ ] Remove `disable-model-invocation: true` so the model can auto-trigger the skill
 - [ ] Update all internal references back to stable names (`/deepen-plan` not `/deepen-plan-beta`)
 - [ ] Restore stable plan file naming (remove `-beta` from `-beta-plan.md` convention)
 - [ ] Delete the beta skill directory
